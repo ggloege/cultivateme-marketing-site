@@ -1,0 +1,70 @@
+html body {
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: 'Oxygen', sans-serif;
+	margin: none;
+}
+
+/*Color palette from here: https://coolors.co/app/011627-fdfffc-2ec4b6-e71d36-ff9f1c*/
+
+.jumbotron {
+	background-color: white;
+	color: #011627;
+}
+
+.jumbotron > h1 {
+	font-weight: 700;
+}
+
+.jumbotron h3 {
+	font-weight: 300;
+}
+
+a > button {
+	margin: 20px 0px;
+}
+
+
+iframe {
+	margin-top: 70px;
+}
+
+.red-row {
+	background-color: #E71D36;
+	padding: 100px 0 100px 0;
+	color: #FDFFFC;
+	font-size: 1.2em;
+}
+
+.green-row {
+	background-color: #2EC4B6;
+	padding: 100px 0 100px 0;
+	color: #FDFFFC;
+	font-size: 1.2em;
+}
+
+.white-row {
+	background-color: #FDFFFC;
+	padding: 100px 0 100px 0;
+	font-size: 1.2em;
+	color: #011627;
+}
+
+
+.btn-get-started {
+	width: 200px;
+	height: 70px;
+	font-size: 1.5em;
+	background-color: #FF9F1C;
+}
+
+
+h2 {
+	font-weight: 600;
+}
+
+footer {
+	background-color: #011627;
+	color: white;
+	padding: 50px 0px;
+	font-weight: 300;
+}
