@@ -69,6 +69,24 @@ a > button {
 	background-color: #FF9F1C;
 }
 
+.bucky-quote {
+	background-image: url("iris.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#quote {
+/*	text-align: center;
+*/	font-weight: 300;
+	color: #FDFFFC;
+	vertical-align: center;
+	margin: 150px auto;
+	text-shadow: 2px 2px 5px #011627;
+	max-width: 80%;
+	min-width: 40%;
+}
 
 h2 {
 	font-weight: 600;
