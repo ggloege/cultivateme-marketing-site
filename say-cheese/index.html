@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>CultivateMe Self-Assessment</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('[data-toggle="popover"]').popover({
+				placement : 'left'
+			});
+		});
+	</script>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	<!-- Local Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="cheese-styles.css">
+	
+	<!-- // <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script> -->
+	<!-- // <script src="app.js"></script> -->
+
+</head>
+
+<body >
+	<header>
+		<div class="container">
+			<img src="../Logo-Banner.jpg" class="header-logo img-responsive">
+		</div>
+	</header>
+
+
+	<div class="container">
+		<h1 class="page-header">Self-Assessment <small>(may take a few seconds to load)</small></h1>
+		<div class="row">
+
+			<div class="col-lg-9">
+				<div id="survey">
+				<!-- Change the width and height values to suit you best -->
+					<div class="typeform-widget" data-url="https://cultivateme.typeform.com/to/JGK3xQ" data-text="Full Sequence Assessment" style="width:100%;height:700px;"></div>
+					<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+				</div>
+			</div>
+
+			<div class="col-lg-3">
+				<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h3 class="panel-title">Competency Scale</h3>
+					  </div>
+
+					<div class="panel-body">
+<!-- 						<p>Click for a quick reminder.</p>
+ -->						<div class="lead-box">
+							<a tabindex="0" class="btn btn-default btn-comp" role="button" data-toggle="popover" data-trigger="focus" title="Thought Leader means..."  data-content="You're one of the best in the industry&hellip; maybe the world. This is pretty rare. You probably get called by journalists from The New York Times for your thoughts on this. You've been interviewed for podcasts or blogs, or you yourself have a blog on this topic that is read by thousands of people. Or you tweet on this topic specifically and have tens of thousands of followers. Maybe you've had a book published on this capability or have given TED talks on it. You get the idea.">9 - Thought Leader</a>
+							<a tabindex="0" class="btn btn-default btn-comp" role="button" data-toggle="popover" data-trigger="focus" title="Teacher means..."  data-content="Not only are you an Expert, but you actually get paid to give advice on this capability. You make a living teaching it to others. Maybe you freelance or are a consultant and you lead trainings on this capability. Maybe teaching this to others is a key part of your job description as a coach or a mentor.">8 - Teacher</a>
+							<a tabindex="0" class="btn btn-default btn-comp" role="button" data-toggle="popover" data-trigger="focus" title="Expert means..."  data-content='Not only are you a Pro with this capability, but other people in your professional circle seek out your advice on this. People you know email you and say, "Can we grab coffee next week? I want to pick your brain about [this capability]."'>7 - Expert</a>
+						</div>
+						<div class="develop-box">
+							<a tabindex="0" class="btn btn-default btn-comp" role="button" data-toggle="popover" data-trigger="focus" title="Pro means..."  data-content="This is something you would likely put at the top of your resume as a unique capability that sets you apart. If someone knows you and wants you on their team, it's probably because of this. This is one of the reasons you would get hired. This is the unique value you would bring to an organization.">6 - Pro</a>
+							<a tabindex="0" class="btn btn-default btn-comp" role="button" data-toggle="popover" data-trigger="focus" title="Competent means..."  data-content="This is something you can do. You do it most days, or you wouldn't have any trouble doing it if asked. You'd even be fine getting paid to do it. But it's also nothing super special for you. You probably wouldn't market yourself as having this capability.">5 - Competent</a>
+							<a tabindex="0" class="btn btn-default btn-comp" role="button" data-toggle="popover" data-trigger="focus" title="Novice means..."  data-content="You can perform this capability completely. You've learned it and have done it before. But you don't feel comfortable in a professional setting. If someone was trying to hire you to perform this, you'd be uncomfortable taking their money. Maybe you'd do it for free just to get the experience.">4 - Novice</a>
+						</div>
+						<div class="discover-box">
+							<a tabindex="0" class="btn btn-default btn-comp" role="button" data-toggle="popover" data-trigger="focus"  title="Beginner means..." data-content="You've started learning this capability, but you can't really do it just yet.">3 - Beginner</a>
+							<a tabindex="0" class="btn btn-default btn-comp" role="button" data-toggle="popover" data-trigger="focus" title="Aware means..." data-content="You know what this capability is&mdash;maybe seen other people doing it&mdash;but you’ve never really done it yourself. It’s like a city on the map&hellip; you know where it is, you know a bit about it, but you’ve never actually been there.">2 - Aware</a>
+							<a tabindex="0" class="btn btn-default btn-comp" role="button" data-toggle="popover" data-trigger="focus" title="Clueless means..." data-content='You read this capability and think to yourself, “I don’t even know what this means. I’ve never heard of it. I don’t know the first thing about it.” If someone asked you how good you are with this capability, you would respond, “Huh? I don’t even know what you’re talking about.”'>1 - Clueless</a>
+
+						</div>
+
+						<div class="window text-center" id="comp-ladder">
+<!-- 							<p>What's your competency level for this capability? <br>
+								Use the competency ladder to find out.</p>
+ -->							<p id="message"></p>
+							<button onclick="choseYes()" class="btn btn-default btn-green-border">Yes</button>
+							<button  onclick="choseNo()" class="btn btn-default btn-red-border">No</button>
+							<br>
+							<button id="startOver" onclick="startOver()">reset</button>
+						</div>
+				  </div>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+	<footer>
+		<div class="container">
+			<!-- Stuff goes here -->
+		</div>
+	</footer>
+
+	<script src="compLadder.js"></script>
+
+
+
+</body>
+
+</html>
