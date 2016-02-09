@@ -77,6 +77,13 @@ a > button {
 	background-size: cover;
 }
 
+@media (max-width: 736px) {
+    .bucky-quote {
+        background-attachment:scroll;
+        
+    }
+}
+
 #quote {
 /*	text-align: center;
 */	font-weight: 300;
