@@ -1,0 +1,180 @@
+body { padding-top: 100px; background-color: #EEC258;}
+.header {
+	z-index: 999;
+	position: fixed;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 100px;
+	padding: 20px;
+	background-color: #EEC258;
+}
+
+.navBar {
+	margin-top: 10px;
+	margin-left: -10px;
+	float: right;
+}
+
+.navItem {
+	letter-spacing: 0.03125em;
+	font-size: 1em;
+	float: left;
+	padding: 10px 10px;
+	margin-right: 10px;
+	color: white;
+	/*border: 1px solid black;*/
+}
+
+.navItem:hover {
+	color: #FC6D44;
+}
+
+.selected {
+	color: #FC6D44;
+	text-decoration: underline;
+}
+
+.highlighted {
+	background-color:  #FC6D44;
+	color: white;
+	font-weight: 600;
+	border: none;
+	box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.36);
+}
+
+.highlighted:hover {
+	/*background-color: #EEC258;*/
+	color: white;
+}
+
+.headline {
+	position: relative;
+	width: 100%;
+	padding: 5px 20px 30px 20px;
+	background-color: #EEC258;
+	text-align: center;
+	color: #FC6D44;
+}
+
+.hl1 {
+	font-size: 3em;
+	font-weight: 700;
+	color: white;
+	/*-webkit-text-stroke: 1px white;*/
+	letter-spacing: 0.03125em;
+}
+
+.em2 {
+	font-size: 2em;
+}
+
+.hl2 {
+	font-size: 0.9em;
+	font-weight: 400;
+	color: white;
+}
+
+.content {
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 7% 17.5%;
+	background-color: white;
+}
+
+
+.row {
+	position: relative;
+	float: left;
+	width: 100%;
+	margin-bottom: 5%;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 10px;
+}
+
+.separator {
+	border-top: 1px solid black;
+	width: 90%;
+	height: 1px;
+}
+
+.width35 {width: 35%;}
+.width65 {width: 65%;}
+.width100 {width: 100%;}
+
+.column ul {
+	margin: 0;
+	padding: 0;
+}
+
+.column li {
+	margin: 0 0 10px 0;
+}
+
+.column ol {
+	margin: 0;
+	padding: 0;
+}
+
+.column li > p {
+	margin: 0;
+}
+
+
+h1 {
+	margin: 5px 0 10px 0;
+	font-size: 1.5em;
+}
+
+h2 {
+	margin: 10px 0 5px 0;
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+h3 {
+	margin: 0 0 5px 0;
+	font-size: 1.2em;
+	font-weight: 600;
+
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+.block {
+	width: 46%;
+	padding: 15px;
+	margin: 0 2% 2% 0;
+	border: 1px solid black;
+	float: left;
+	overflow: hidden;
+	font-size: 0.9em;
+	height: 10em;
+}
+
+@media screen and (max-width: 768px) { .block {height: 25em;} }
+@media screen and (min-width: 768px) { .block {height: 18em;} }
+@media screen and (min-width: 1024px) { .block {height: 13em;} }
+@media screen and (min-width: 1280px) { .block {height: 11em;} }
+@media screen and (min-width: 1440px) { .block {height: 12em;} }
+@media screen and (min-width: 1920px) { .block {height: 10em;} }
+
+.block p {
+	padding-bottom: 0;
+}
+
+
+.footer {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 300px;
+	background-color: #23292F;
+}
