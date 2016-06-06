@@ -192,6 +192,10 @@ p {
     	height: 80px;
     }
 
+    .navBar {
+		margin-top: -2px;
+	}
+
 	.logo {
 		width: 29%;
 		margin-top: -12px;
@@ -222,18 +226,20 @@ p {
 
 
 @media screen and (max-width: 435px) and (orientation:portrait) {
-    body { padding-top: 140px; }
+    body { padding-top: 105px; }
 
     .header {
-    	height: 140px;
+    	padding: 10px 0px;
+    	height: 105px;
     }
 
     .navBar {
     	position: absolute;
 		float: none;
 		margin-left: 50%;
+		margin-top: -12px;
 		margin-right: -100%;
-		transform: translateX(-55%);
+		transform: translateX(-53%);
 	}
 
     .headline {
@@ -243,6 +249,7 @@ p {
     .logo {
     	position: relative;
     	left: 50%;
+    	width: 50%;
     	transform: translateX(-50%);
     }
 

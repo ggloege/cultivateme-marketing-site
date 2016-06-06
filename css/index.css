@@ -113,6 +113,10 @@
 	.irisGIF {
 		bottom: 5%;
 	}
+
+	.navBar {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 435px) and (orientation:portrait) {
@@ -126,6 +130,14 @@
 
     .irisGIF {
 		display: block;
+	}
+
+	.navBar {
+		width: 100%;
+	}
+	
+	.navItem {
+		margin-right: 5px;
 	}
 }
 
