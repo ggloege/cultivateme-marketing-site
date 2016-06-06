@@ -10,6 +10,11 @@ body { padding-top: 100px; background-color: #EEC258;}
 	background-color: #EEC258;
 }
 
+.logo {
+	margin-left: 10px; 
+	margin-top: -7.5px;
+}
+
 .navBar {
 	margin-top: 10px;
 	margin-left: -10px;
@@ -177,4 +182,80 @@ p {
 	width: 100%;
 	height: 300px;
 	background-color: #23292F;
+}
+
+@media screen and (max-width: 736px) and (orientation:landscape) {
+	
+	body { padding-top: 80px; }
+
+    .header {
+    	height: 80px;
+    }
+
+	.logo {
+		width: 29%;
+		margin-top: -12px;
+	}
+
+	.headline {
+		padding: 0px 20px 15px 20px;
+	}
+
+	.content {
+		padding: 7% 5%;
+	}
+
+	.block {
+		padding: 5px;
+		height: 20em;
+	}
+
+	.column {
+		padding: 10px;
+	}
+
+	.block {
+		padding: 5px;
+		height: 17em;
+	}
+}
+
+
+@media screen and (max-width: 435px) and (orientation:portrait) {
+    body { padding-top: 140px; }
+
+    .header {
+    	height: 140px;
+    }
+
+    .navBar {
+    	position: absolute;
+		float: none;
+		margin-left: 50%;
+		margin-right: -100%;
+		transform: translateX(-55%);
+	}
+
+    .headline {
+		padding: 0px 20px 15px 20px;
+	}
+
+    .logo {
+    	position: relative;
+    	left: 50%;
+    	transform: translateX(-50%);
+    }
+
+    .content {
+		padding: 7% 2%;
+	}
+
+	.block {
+		padding: 5px;
+		height: 20em;
+	}
+
+	.column {
+		padding: 5px;
+	}
 }

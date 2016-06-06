@@ -6,7 +6,11 @@
           box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 435px) {
+    body{font-size: 70%;}
+}
+
+@media screen and (min-width: 436px) {
     body{font-size: 100%;}
 }
 

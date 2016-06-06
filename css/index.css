@@ -62,16 +62,80 @@
 	bottom: 5%;
 	background: url(../images/logo_color_black.svg) no-repeat left center;
 	-webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+ 	-moz-background-size: contain;
+ 	-o-background-size: contain;
+ 	background-size: contain;
 	width: 30%;
 	height: 10%;
 }
+
 
 .irisVideo {
 	position: fixed;
 	z-index: -999;
 	right: 0%;
 	bottom: 0%;
+}
+
+.irisGIF {
+	display: none;
+	z-index: -999;
+	position: absolute;
+	background: url(../images/iris_video.gif) no-repeat center center;
+	-webkit-background-size: contain;
+ 	-moz-background-size: contain;
+ 	-o-background-size: contain;
+ 	background-size: contain;
+ 	width: 90%;
+ 	left: 5%;
+ 	padding-bottom: 100%;
+ 	bottom: 15%;
+ 	height: 0;
+}
+
+@media screen and (max-width: 1024px) and (orientation:landscape) {
+	.irisVideo {
+    	display: none;
+    }
+
+    .irisGIF {
+		display: block;
+		left: unset;
+		padding-bottom: unset;
+	 	right: 0;
+	 	bottom: 0;
+	 	width: 50%;
+	 	height: 80%;
+	}
+}
+
+@media screen and (max-width: 320px) and (orientation:portrait) {
+	.irisGIF {
+		bottom: 5%;
+	}
+}
+
+@media screen and (max-width: 435px) and (orientation:portrait) {
+    .irisImage {
+    	width: 50%;
+    }
+
+    .irisVideo {
+    	display: none;
+    }
+
+    .irisGIF {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 768px) and (orientation:portrait) {
+	.irisVideo {
+    	display: none;
+    }
+
+    .irisGIF {
+		display: block;
+		bottom: 5%;
+	}
 }
