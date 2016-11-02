@@ -1,5 +1,5 @@
 @media screen and (max-width: 435px) {
-    body{font-size: 70%;}
+    body{font-size: 110%;}
 }
 
 @media screen and (min-width: 436px) {
@@ -24,6 +24,17 @@
 
 @media screen and (min-width: 1680px) {
     body{font-size: 130%;}
+}
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait) { 
+
+  body{font-size: 170%;}
+
 }
 
 * {
@@ -116,7 +127,7 @@ body {
 .pageDetails {
   position: absolute;
   width: 100%;
-  top: 50px;
+  top: 30px;
 }
 
 .pageDetails > .title {

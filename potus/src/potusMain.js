@@ -13,7 +13,7 @@ if ( localStorage.voted ) {
 }
 
 var pageWidth = document.body.clientWidth;
-if (!window.dataLayer) window.dataLayer = [];
+// if (!window.dataLayer) window.dataLayer = [];
 // d3.selectAll('#clintonImg, #trumpImg').style('width', (100*pageWidth/1440)+ 'px');
 
 function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, ceDataTSV) {
@@ -191,17 +191,19 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 		localStorage.voted = candidate;
 		localStorage.opponent = opponent;
 
-		window.dataLayer.push({
-		    "ecommerce": {
-		        "add": {
-		            "products": [
-		                {
-		                    "id": candidate,
-		                }
-		            ]
-		        }
-		    }
-		});
+		// window.dataLayer.push({
+		//     "ecommerce": {
+		//         "add": {
+		//             "products": [
+		//                 {
+		//                     "id": candidate,
+		//                 }
+		//             ]
+		//         }
+		//     }
+		// });
+
+		yaCounter40624390.reachGoal(candidate);
 	});
 
 	function resetScore(d,score){
