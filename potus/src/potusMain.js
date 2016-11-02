@@ -13,6 +13,7 @@ if ( localStorage.voted ) {
 }
 
 var pageWidth = document.body.clientWidth;
+if (!window.dataLayer) window.dataLayer = [];
 // d3.selectAll('#clintonImg, #trumpImg').style('width', (100*pageWidth/1440)+ 'px');
 
 function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, ceDataTSV) {
