@@ -1,0 +1,67 @@
+.iris-tip {
+  z-index: 9999;
+  position: fixed;
+  line-height: 1.4;
+  font-weight: 300;
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  padding: 10px;
+  background: RGBA(255, 255, 255, 1);
+  box-shadow: 0px 0px 2px grey;
+  min-width: 150px;
+  max-width: 370px;
+  text-align: center;
+  color: #000;
+  border-radius: 4px;
+  pointer-events: none
+}
+.iris-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 18px;
+  width: 100%;
+  line-height: 0.5;
+  color: RGBA(255, 255, 255, 1);
+  position: absolute;
+  pointer-events: none
+}
+.iris-tip.n {
+  transform: translate(0px,-5px);
+}
+.iris-tip.e {
+  transform: translate(5px,0px);
+}
+.iris-tip.s {
+  transform: translate(0px,5px);
+}
+.iris-tip.w {
+  transform: translate(-5px,0px);
+}
+
+.iris-tip.n:after {
+  content: "\25BC";
+  margin: -2px 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center
+}
+.iris-tip.e:after {
+  content: "\25C0";
+  margin: -6px 0 0 -4px;
+  top: 50%;
+  left: -50%;
+  /*background: black;*/
+}
+.iris-tip.s:after {
+  content: "\25B2";
+  margin: 0 0 1px;
+  top: -8px;
+  left: 0;
+  text-align: center
+}
+.iris-tip.w:after {
+  content: "\25B6";
+  margin: -4px 0 0 4px;
+  top: 50%;
+  left: 50%
+}

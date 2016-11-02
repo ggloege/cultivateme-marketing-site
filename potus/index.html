@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Who is more qualified to do the job?</title>
+  <script src="lib/d3.min.js"></script>
+  <script src="lib/d3.tip.js"></script>
+  <script src="lib/queue.min.js"></script>
+  <script src="lib/lodash.min.js"></script>
+
+  <link href="lib/semanticUI/semantic.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700' rel='stylesheet' type='text/css'>
+  
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/flip.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/iristip.css">
+
+</head>
+<body>
+
+
+  <div class="flip-container" id='flip-container'>
+  <div class="flipper">
+    <div class="front">
+      <div class='irisContainer' id='irisC'></div>
+    </div>
+    <div class="back">
+      <div class='irisContainer' id='irisD'></div>
+    </div>
+  </div>
+</div>
+
+ <div class='irisContainer' id='irisB'>  
+    <img id='clintonImg' src="images/clinton.jpg" style="position: absolute; z-index: 999; left: 20%; top: 50%; width: 6%; min-width: 50px; transform: translate(-50%,-53%); border-radius: 50%;"/>
+  </div>
+  <div class='irisContainer' id='irisA'>
+      <img id='trumpImg'src="images/trump.jpg" style="position: absolute; z-index: 999; left: 80%; top: 50%; width: 6%; min-width: 50px; transform: translate(-50%,-53%); border-radius: 50%;"/>
+  </div>
+
+
+  
+
+
+  <div class='pageDetails'>
+    <div class='title'>Who is more qualified to do the job?</div>
+    <div class='description'>
+      <!-- To compare Hillary Clinton and Donald Trump to one another, drag one Iris over the other.<br/> -->
+        <!-- To compare either candidate to the job of President of the United States, drag the POTUS Iris over either candidate’s Iris. -->
+        To compare Hillary Clinton and Donald Trump to the job of President of the United States, click on the button below.
+    </div>
+    <button class="ui basic button gapAnalysisButton">
+      <!-- <i class="us flag"></i> -->
+      <img style='position: absolute; top: 7px; margin-left: -10px' width='23' src="images/iris_simple.svg"/>
+             Compare candidates to the job
+    </button>
+  </div>
+
+  <div class='candidate trump' style="left: 80%; bottom: 10%">
+    <div class='candidateButton' style='background-color: #e30b00' value='trump' opponent='hillary'>Donald J. Trump</div>
+    <div class='voteText'>Vote for Donald here</div>
+  </div> 
+
+   <div class='candidate hillary' style="left: 20%; bottom: 10%">
+    <div class='candidateButton' style='background-color: #386ec9' value='hillary' opponent='trump'>Hillary Clinton</div>
+    <div class='voteText'>Vote for Hillary here</div>
+  </div> 
+
+
+  <button class="ui basic button backButton" style='top: 20%; bottom: unset; width: 80px'>
+    <i class="icon arrow left" style='float: left'></i>
+    <img style='position: absolute; top: 7px; margin-left: -10px' width='23' src="images/iris_simple.svg"/>
+  </button>
+
+  <div class='irisDescription' style='bottom: 80px'>
+    <h2 style="margin-bottom: 5px;"></h2>
+    <p style="margin-top: 0px;"></p>
+  </div>
+
+  <div class='logo'>
+    <a href='http://cultivateme.xyz'>
+      <span style='position: relative; bottom: 16px; margin-right: 4px'>Brought to you by </span> <img width='100' src="images/CultivateMe.svg"/>
+    </a>
+  </div>
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40624390 = new Ya.Metrika({ id:40624390, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40624390" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <script src="src/Utils.js"></script>
+  <script src="src/Options.js"></script>
+  <script src="src/Iris.js"></script>
+  <script src="src/potusMain.js"></script>
+</body>
