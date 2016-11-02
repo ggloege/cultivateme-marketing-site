@@ -77,18 +77,6 @@ body {
   background-size: cover;
 }
 
-.gapAnalysisButton {
-  position: relative;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.backButton {
-  position: absolute;
-  opacity: 0;
-  bottom: 5%;
-  left: 5%;
-}
 
 body {
   position: relative;
@@ -106,13 +94,16 @@ body {
 }
 
 .irisDescription {
-  position: absolute;
-  width: 35%;
-  height: auto;
+  /*position: relative;*/
+  /*width: 35%;*/
+  /*height: auto;*/
   text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 3%;
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+  /*bottom: 3%;*/
+  padding: 0 20%;
+  margin-top: 20px;
+  font-size: 1em;
 }
 
 .irisDescription > h2 {
@@ -158,6 +149,8 @@ body {
   border-radius: 3px;
   font-size: 18pt;
   font-weight: 500;
+  white-space: nowrap;
+  white-space: pre;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -176,4 +169,43 @@ body {
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
+  white-space: nowrap;
+  /*white-space: pre;*/
+}
+
+.compareCandidates {
+  position: absolute;
+  bottom: 11%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.compareCandidates > .help {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 10pt;
+  margin-top: 15px;
+}
+
+.compareCandidates > .gapAnalysisButton {
+  position: relative;
+  width: 245px;
+  top: 15px;
+}
+
+.backButton {
+  position: absolute;
+  opacity: 0;
+  bottom: 5%;
+  left: 5%;
+}
+
+.roleIrisCaption {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  bottom: 27%;
+  opacity: 1;
 }

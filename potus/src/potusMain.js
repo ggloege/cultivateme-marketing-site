@@ -19,12 +19,12 @@ var pageWidth = document.body.clientWidth;
 function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, ceDataTSV) {
 	if (error) throw error;
 	var capabilityLevels = ['Clueless','Aware','Beginner','Novice','Competent','Pro','Expert','Teacher','Thought Leader'];
-
+	var isGapAnalysisActive = false;
 	var options = {
 		 buildInDuration: 1600,
 		 initialLocation: [-0.2,0.5],
 		 location: [0.2,0.5],
-		 maxRadius: 300*pageWidth/1440,
+		 maxRadius: 300*pageWidth/1600,
 		 name: 'Clinton'
 	};
 	//{title:'Take a selfie of your skills',initialLocation: [0,0], location: [0,0.5], buildInDuration: 1000, rotation: 90};
@@ -35,13 +35,13 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 	
 
 	// grayOutIris(sequenceTrump,ceData.engagements);
-	grayOutIris(sequence,ceData.engagements);
+	// grayOutIris(sequence,ceData.engagements);
 	var iris = Iris( '#irisA', sequence, options );
 	var options2 = {
 		 buildInDuration: 1600,
 		 initialLocation: [1.2,0.5],
 		 location: [0.8,0.5],
-		 maxRadius: 300*pageWidth/1440,
+		 maxRadius: 300*pageWidth/1600,
 		 name: 'Trump'
 	};
 	var iris2 = Iris( '#irisB', sequenceTrump, options2 );
@@ -50,7 +50,7 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 		buildInDuration: 1600,
 		initialLocation: [0.5,0.5],
 		location: [0.5,0.5],
-		maxRadius: 220*pageWidth/1440,
+		maxRadius: 220*pageWidth/1600,
 		colorMap: {
 			""								: "#ffffff",
 			"Awareness and decision making"	: "#DB3340",
@@ -100,9 +100,51 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 	// });
 
 	d3.select('.gapAnalysisButton').on('click', function(){
-		d3.select(this).td(500).style('opacity', 0);
-		this.style.pointerEvents = 'none';
+		isGapAnalysisActive = !isGapAnalysisActive;
+		// d3.select(this).td(500).style('opacity', 0);
+		d3.select('.roleIrisCaption').td(500).style('opacity', +(!isGapAnalysisActive));
 		
+		var button = d3.select(this);
+		setTimeout( function(){
+			button.select('#GA_run').attr('hidden', isGapAnalysisActive ? '' : null );
+			button.select('#GA_back').attr('hidden', !isGapAnalysisActive ? '' : null );
+		}, 1400); 
+		
+		// this.style.pointerEvents = 'none';
+		
+		if ( isGapAnalysisActive ) runGapAnalysis();
+		else backFromGapAnalysis();
+	});
+
+
+	d3.selectAll('.candidateButton').on('click', function(){
+		if ( localStorage.voted ) return;
+
+		var candidate = this.getAttribute('value');
+		var opponent = this.getAttribute('opponent');
+		d3.select('.candidate.'+opponent).select('.candidateButton').style('background-color','lightgrey').style('cursor','default');
+		d3.select('.candidate.'+opponent).select('.voteText').text(' ');
+
+		d3.select(this.parentNode).select('.voteText').text('Thank you!');
+		localStorage.voted = candidate;
+		localStorage.opponent = opponent;
+
+		// window.dataLayer.push({
+		//     "ecommerce": {
+		//         "add": {
+		//             "products": [
+		//                 {
+		//                     "id": candidate,
+		//                 }
+		//             ]
+		//         }
+		//     }
+		// });
+
+		yaCounter40624390.reachGoal(candidate);
+	});
+
+	function runGapAnalysis() {
 		document.getElementById("flip-container").classList.toggle('flipped');
 
 		setTimeout( function(){ 
@@ -136,14 +178,14 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 				d3.select( "#flip-container" ).td(700).style('opacity',0);
 			},700);
 
-			d3.select('.backButton').td(700).style('opacity', 1);
-			d3.select('.backButton').style('pointer-events', null);
+			// d3.select('.backButton').td(700).style('opacity', 1);
+			// d3.select('.backButton').style('pointer-events', null);
 		}, 800 );
-	});
+	}
 
-	d3.select('.backButton').on('click', function(){
-		d3.select(this).td(500).style('opacity', 0);
-		this.style.pointerEvents = 'none';
+	function backFromGapAnalysis() {
+		// d3.select(this).td(500).style('opacity', 0);
+		// this.style.pointerEvents = 'none';
 
 		grayOutIris(sequence,[]);
 		iris.setMode('normal');
@@ -175,37 +217,9 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 			document.getElementById("flip-container").classList.toggle('flipped');
 		}, 1400);
 
-		d3.select('.gapAnalysisButton').td(700).style('opacity', 1);
-		d3.select('.gapAnalysisButton').style('pointer-events', null);
-	});
-
-	d3.selectAll('.candidateButton').on('click', function(){
-		if ( localStorage.voted ) return;
-
-		var candidate = this.getAttribute('value');
-		var opponent = this.getAttribute('opponent');
-		d3.select('.candidate.'+opponent).select('.candidateButton').style('background-color','lightgrey').style('cursor','default');
-		d3.select('.candidate.'+opponent).select('.voteText').text(' ');
-
-		d3.select(this.parentNode).select('.voteText').text('Thank you!');
-		localStorage.voted = candidate;
-		localStorage.opponent = opponent;
-
-		// window.dataLayer.push({
-		//     "ecommerce": {
-		//         "add": {
-		//             "products": [
-		//                 {
-		//                     "id": candidate,
-		//                 }
-		//             ]
-		//         }
-		//     }
-		// });
-
-		yaCounter40624390.reachGoal(candidate);
-	});
-
+		// d3.select('.gapAnalysisButton').td(700).style('opacity', 1);
+		// d3.select('.gapAnalysisButton').style('pointer-events', null);
+	}
 	function resetScore(d,score){
 		if ( d.hasOwnProperty("children") ) {
 			d.children.forEach( function(c){ 
@@ -313,4 +327,8 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 			engagements: ceList
 		}
 	}
+}
+
+function activateModal(selector) {
+	jQuery(selector).modal({inverted: false}).modal('show');
 }
