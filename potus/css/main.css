@@ -218,3 +218,10 @@ body {
   opacity: 1;
   pointer-events: none;
 }
+
+.infoContainer {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+}

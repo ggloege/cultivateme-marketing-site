@@ -49,15 +49,18 @@
     </div>
     <div class="back">
       <div class='irisContainer' id='irisD'></div>
+      <div class='irisContainer' id='irisD-copy'></div>
     </div>
   </div>
 </div>
 
  <div class='irisContainer' id='irisB'>  
+  <div>
+  </div>
     <img id='clintonImg' src="images/clinton.jpg" style="position: absolute; z-index: 999; left: 20%; top: 50%; width: 6%; min-width: 50px; transform: translate(-50%,-53%); border-radius: 50%;"/>
   </div>
   <div class='irisContainer' id='irisA'>
-      <img id='trumpImg'src="images/trump.jpg" style="position: absolute; z-index: 999; left: 80%; top: 50%; width: 6%; min-width: 50px; transform: translate(-50%,-53%); border-radius: 50%;"/>
+      <img id='trumpImg' src="images/trump.jpg" style="position: absolute; z-index: 999; left: 80%; top: 50%; width: 6%; min-width: 50px; transform: translate(-50%,-53%); border-radius: 50%;"/>
   </div>
 
 
@@ -126,14 +129,24 @@
 
   </div>
 
-  <div class="ui tiny modal videoModal" >
-  <!-- <div class="header">Read</div> -->
-  <div class="content">
-    <iframe src="https://player.vimeo.com/video/189957118?color=ffffff&byline=0" width="850" height="457" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <div class="ui modal videoModal" >
+    <!-- <div class="header">Read</div> -->
+    <div class="content">
+      <iframe src="https://player.vimeo.com/video/189957118?color=ffffff&byline=0" width="850" height="457" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
   </div>
-</div>
 
-
+  <div class="ui small modal infoModal" >
+    <div class="header">About</div>
+    <div class="content">
+      <span style='position: relative; bottom: 16px; margin-right: 4px'>Brought to you by </span> <img width='100' src="images/CultivateMe.svg"/><br/>
+      <span style='position: relative; bottom: 16px; margin-right: 4px'>Based on taxonomy created by The Occupational Information Network (O*NET)</span> <img width='50' src="images/onet.png"/>
+    </div>
+  </div>
+  
+  <div class='infoContainer'>
+    <i class="info icon" onclick="activateModal('.infoModal')"></i>
+  </div>
 <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40624390 = new Ya.Metrika({ id:40624390, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40624390" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <script src="src/Utils.js"></script>
   <script src="src/Options.js"></script>

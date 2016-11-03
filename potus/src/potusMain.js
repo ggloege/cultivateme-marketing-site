@@ -72,16 +72,18 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 
 	grayOutIris(potusSoulSequence,ceData.engagements);
 	var potusSoulIris = Iris( '#irisD', potusSoulSequence, potusRoleIrisOption );
+	var potusSoulIrisCopy = Iris( '#irisD-copy', potusSoulSequence, potusRoleIrisOption );
 	potusSoulIris.update(1);
-	var clonedPotusSoulIris;
-	setTimeout( function(){
-		clonedPotusSoulIris = document.querySelector('#irisD > svg').cloneNode(true);
-		clonedPotusSoulIris.setAttribute('id','clonedPotusSoulIris');
-		document.querySelector('#irisD').appendChild(clonedPotusSoulIris);
-	},100);
+	potusSoulIrisCopy.update(1);
+	// var clonedPotusSoulIris;
+	// setTimeout( function(){
+	// 	clonedPotusSoulIris = document.querySelector('#irisD > svg').cloneNode(true);
+	// 	clonedPotusSoulIris.setAttribute('id','clonedPotusSoulIris');
+	// 	document.querySelector('#irisD').appendChild(clonedPotusSoulIris);
+	// },100);
 
 
-	[iris,iris2,potusRoleIris,potusSoulIris].forEach( function(ir){
+	[iris,iris2,potusRoleIris].forEach( function(ir){
 		ir.onRayMouseOver( function(d){  setDescription(d); });
 		ir.onRayMouseLeave( function(d){ setDescription({name:'', description:'', showHelpButton: true});});
 	});
@@ -153,18 +155,24 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 		document.getElementById("flip-container").classList.toggle('flipped');
 		d3.select('#sealImg').td(700).style('opacity',0);
 
+		document.getElementById('clintonImg').style.left = 0.2*pageWidth+'px';
+		document.getElementById('trumpImg').style.left = 0.8*pageWidth+'px';
+
 		setTimeout( function(){ 
 			iris.options.location	= [0.30,0.5];
 			iris2.options.location	= [0.70,0.5];
 			potusSoulIris.options.location	= [0.30,0.5];
+			potusSoulIrisCopy.options.location	= [0.70,0.5];
 			
-			d3.select('#clintonImg').td(700).style('left','30%');
-			d3.select('#trumpImg').td(700).style('left','70%');
-			d3.select('#clonedPotusSoulIris>g').td(700).attr('transform','translate('+0.2*document.body.clientWidth+',0)');
+
+			d3.select('#clintonImg').td(700).style('left',0.3*pageWidth+'px').each('end', function(){ this.style.left = '30%'; });
+			d3.select('#trumpImg').td(700).style('left',0.7*pageWidth+'px').each('end', function(){ this.style.left = '70%'; });
+			// d3.select('#clonedPotusSoulIris>g').td(700).attr('transform','translate('+0.2*document.body.clientWidth+',0)');
 			
 			iris.update(700);
 			iris2.update(700);
 			potusSoulIris.update(700);
+			potusSoulIrisCopy.update(700);
 
 
 			setTimeout( function(){ 
@@ -181,6 +189,8 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 
 				potusSoulIris.options.opacity = 0;
 				potusSoulIris.update(500);
+				potusSoulIrisCopy.options.opacity = 0;
+				potusSoulIrisCopy.update(500);
 				d3.select( "#flip-container" ).td(700).style('opacity',0);
 			},700);
 
@@ -205,19 +215,27 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 		potusSoulIris.options.opacity	= 1;
 		potusSoulIris.update(700);
 
+		potusSoulIrisCopy.options.opacity	= 1;
+		potusSoulIrisCopy.update(700);
+
+		document.getElementById('clintonImg').style.left = 0.3*pageWidth+'px';
+		document.getElementById('trumpImg').style.left = 0.7*pageWidth+'px';
+
 		setTimeout( function(){ 
 			iris.options.location	= [0.2,0.5];
 			iris2.options.location	= [0.8,0.5];
 			potusSoulIris.options.location	= [0.5,0.5];
+			potusSoulIrisCopy.options.location	= [0.5,0.5];
 			
-			d3.select('#clintonImg').td(700).style('left','20%');
-			d3.select('#trumpImg').td(700).style('left','80%');
-			d3.select('#clonedPotusSoulIris>g').td(700).attr('transform','translate(0,0)');
+			d3.select('#clintonImg').td(700).style('left',0.2*pageWidth+'px').each('end', function(){ this.style.left = '20%'; });
+			d3.select('#trumpImg').td(700).style('left',0.8*pageWidth+'px').each('end', function(){ this.style.left = '80%'; });
+			// d3.select('#clonedPotusSoulIris>g').td(700).attr('transform','translate(0,0)');
 			d3.select( "#flip-container" ).td(700).style('opacity',1);
 			
 			iris.update(700);
 			iris2.update(700);
 			potusSoulIris.update(700);
+			potusSoulIrisCopy.update(700);
 		},700);
 
 		setTimeout( function(){ 
