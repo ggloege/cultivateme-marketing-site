@@ -107,11 +107,11 @@ body {
 }
 
 .irisDescription > h2 {
-  font-weight: 1.3em;
+  font-size: 1.3em;
 }
 
 .irisDescription > p {
-  font-weight: 1em;
+  font-size: 1em;
 }
 
 
@@ -147,6 +147,8 @@ body {
   color: white;
   padding: 10px;
   border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
   font-size: 18pt;
   font-weight: 500;
   white-space: nowrap;
@@ -175,7 +177,7 @@ body {
 
 .compareCandidates {
   position: absolute;
-  bottom: 11%;
+  bottom: 12%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -191,7 +193,13 @@ body {
 .compareCandidates > .gapAnalysisButton {
   position: relative;
   width: 245px;
-  top: 15px;
+  height: 70px;
+  font-weight: 700 !important;
+  /*top: 15px;*/
+}
+
+.compareCandidates > .gapAnalysisButton > span{
+  font-weight: 600 !important;
 }
 
 .backButton {
@@ -208,4 +216,5 @@ body {
   width: 100%;
   bottom: 27%;
   opacity: 1;
+  pointer-events: none;
 }

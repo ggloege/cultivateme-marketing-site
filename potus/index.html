@@ -4,6 +4,24 @@
   <meta charset="utf-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <title>Who is more qualified to do the job?</title>
+
+
+  <meta property="og:type"  content="website" />
+  <meta property="og:url"   content="http://cultivateme.xyz/potus/" />
+
+  <meta property="og:title"           content="Who is more qualified to do the job?" />
+  <meta property="og:description"     content="Compare Hillary Clinton and Donald Trump to the job of President of the United States" />
+  <meta property="og:image"           content="http://cultivateme.xyz/potus/images/metaimage.jpg" />
+  <meta property="og:image:type"      content="image/png" />
+
+  <meta name="twitter:card"         content="summary" />
+  <meta name="twitter:site"         content="@gabegloege" />
+  <meta name="twitter:title"        content="Who is more qualified to do the job?" />
+  <meta name="twitter:description"  content="Compare Hillary Clinton and Donald Trump to the job of President of the United States" />
+  <meta name="twitter:image"        content="http://cultivateme.xyz/potus/images/metaimage.jpg" />
+  <meta name="twitter:url"          content="http://cultivateme.xyz/potus/" />
+
+
   <script src="lib/d3.min.js"></script>
   <script src="lib/d3.tip.js"></script>
   <script src="lib/queue.min.js"></script>
@@ -21,7 +39,7 @@
 </head>
 <body>
 
-
+  <img id='sealImg' src="images/Seal_of_the_President_of_the_United_States.png" style="position: absolute; z-index: 999; left: 50%; top: 50%; width: 5%; min-width: 50px; transform: translate(-50%,-53%); border-radius: 50%; pointer-events: none;"/>
   <div class="flip-container" id='flip-container'>
   <div class="flipper">
     <div class="front">
@@ -47,6 +65,12 @@
   <div class='pageDetails'>
     <div class='title'>Who is more qualified to do the job?</div>
     <div class='description'>
+      <div id='readGraphsButton'>
+        <span style='color: #ff6327; cursor: pointer; text-decoration: underline' onclick="activateModal('.videoModal')">
+        How to read these graphs
+        </span>
+        <img style='display: inline-block; position: relative; top: 7px; width: 1.2em;' src="images/iris_simple.svg"/>
+      </div>
       <!-- To compare Hillary Clinton and Donald Trump to one another, drag one Iris over the other.<br/> -->
         <!-- To compare either candidate to the job of President of the United States, drag the POTUS Iris over either candidate’s Iris. -->
         <!-- To compare Hillary Clinton and Donald Trump to the job of President of the United States, click on the button below. -->
@@ -58,12 +82,12 @@
   </div>
 
   <div class='candidate trump' style="left: 80%; bottom: 10%">
-    <div class='candidateButton' style='background-color: #e30b00' value='trump' opponent='hillary'>Donald J. Trump</div>
+    <div class='candidateButton' style='border-color: #e30b00; color: #e30b00' value='trump' opponent='hillary'>Donald J. Trump</div>
     <div class='voteText'>Vote for Donald here</div>
   </div> 
 
    <div class='candidate hillary' style="left: 20%; bottom: 10%">
-    <div class='candidateButton' style='background-color: #386ec9' value='hillary' opponent='trump'>Hillary Clinton</div>
+    <div class='candidateButton' style='border-color: #386ec9; color: #386ec9' value='hillary' opponent='trump'>Hillary Clinton</div>
     <div class='voteText'>Vote for Hillary here</div>
   </div> 
 
@@ -75,15 +99,14 @@
 
 
   <div class='compareCandidates'>
-    <button class="ui basic button gapAnalysisButton">
-      <img style='position: absolute; top: 7px; left: 15px' width='23' src="images/iris_simple.svg"/>
-             <span id='GA_run'>Compare candidates to the job</span>
-            <span id='GA_back' hidden>Back to Irises</span>
+    <button class="ui red big button gapAnalysisButton">
+<!-- <img style='position: absolute; top: 7px; left: 15px' width='23' src="images/iris_simple.svg"/>
+ --> <span id='GA_run'>Compare candidates<br/> to the job</span><span id='GA_back' hidden>Back to Irises</span>
     </button>
-    <div class='help'>
+    <!-- <div class='help'>
       <span style='color: #ff6327; cursor: pointer; text-decoration: underline' onclick="activateModal('.videoModal')">How to read these graphs
       </span>
-    </div>
+    </div> -->
   </div>
 
   <div class='roleIrisCaption'>

@@ -6,11 +6,15 @@ queue()
 	.await( createVisualization );
 
 if ( localStorage.voted ) {
-	d3.select('.candidate.'+localStorage.opponent).select('.candidateButton').style('background-color','lightgrey').style('cursor','default');
+	d3.select('.candidate.'+localStorage.opponent).select('.candidateButton').style('border-color','lightgrey').style('color','lightgrey').style('cursor','default');
 	d3.select('.candidate.'+localStorage.opponent).select('.voteText').text(' ');
 
 	d3.select('.candidate.'+localStorage.voted).select('.voteText').text("You've voted already");
 }
+
+d3.select('#sealImg').style('opacity',0).td(700).style('opacity',1);
+d3.select('#clintonImg').style('opacity',0).td(700).style('opacity',1);
+d3.select('#trumpImg').style('opacity',0).td(700).style('opacity',1);
 
 var pageWidth = document.body.clientWidth;
 // if (!window.dataLayer) window.dataLayer = [];
@@ -79,12 +83,13 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 
 	[iris,iris2,potusRoleIris,potusSoulIris].forEach( function(ir){
 		ir.onRayMouseOver( function(d){  setDescription(d); });
-		ir.onRayMouseLeave( function(d){ setDescription({name:'', description:''});});
+		ir.onRayMouseLeave( function(d){ setDescription({name:'', description:'', showHelpButton: true});});
 	});
 
 	function setDescription(d) {
 		d3.select('.irisDescription>h2').html( '<span style="font-weight: 600">' + d.name + ( d.level ? ': '+capabilityLevels[d.level] : '' ) +"</span>" );
 		d3.select('.irisDescription>p').text( d.description );
+		d3.select('#readGraphsButton').attr('hidden', d.showHelpButton ? null : '' );
 	}
 
 	console.log( ceData )
@@ -146,6 +151,7 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 
 	function runGapAnalysis() {
 		document.getElementById("flip-container").classList.toggle('flipped');
+		d3.select('#sealImg').td(700).style('opacity',0);
 
 		setTimeout( function(){ 
 			iris.options.location	= [0.30,0.5];
@@ -186,6 +192,7 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 	function backFromGapAnalysis() {
 		// d3.select(this).td(500).style('opacity', 0);
 		// this.style.pointerEvents = 'none';
+		d3.select('#sealImg').td(700).style('opacity',1);
 
 		grayOutIris(sequence,[]);
 		iris.setMode('normal');
