@@ -58,11 +58,11 @@ function createVisualization(error, sequence,sequenceTrump, potusRoleSequence, c
 		colorMap: {
 			""								: "#ffffff",
 			"Awareness and decision making"	: "#DB3340",
-			"Campaigning"					: "#71d362",
-			"Commander in chief"			: "#ffd16f",
-			"International relations"		: "#ff3d5d",
-			"Political discourse"			: "#ff7218",
-			"Publicity and communications"	: "#04b3f3",
+			"Campaigning"					: "#ff7218",//"#488C13", 
+			"Commander in chief"			: "#E9B104",
+			"International relations"		: "#488C13",//"#ff3d5d",
+			"Political discourse"			: "#3a629e",
+			"Publicity and communications"	: "#6673ff",
 		}
 	};
 	var potusRoleIris = Iris( '#irisC', potusRoleSequence, potusRoleIrisOption );
